@@ -12,10 +12,7 @@ public class PositionFinderAndToggler {
         return matches;
     }
     public static int toggler(int termContainingMissingDigit) {
-        if (termContainingMissingDigit==0) {
-            return 1;
-        }
-        return 0;
+        return (termContainingMissingDigit==0 ?  1: 0);
     }
     public static int findWhichTermHasMissingDigit(String [] terms) {
         if (terms[0].contains("?")) {
