@@ -22,8 +22,8 @@ public class DigitFinder {
             equation.indexOfQuestionMark = PositionFinderAndToggler.findPositionOfQuestionMark(equation);
         }
         if (equation.calculatedValue.length() == equation.givenValue.length()) {
-            int matches = PositionFinderAndToggler.findMatches(equation);
-            if (matches == (equation.givenValue.length() - 1)) {
+            boolean matches = PositionFinderAndToggler.checkIfMatches(equation);
+            if (matches) {
                 return (Integer.parseInt(equation.calculatedValue.charAt(equation.indexOfQuestionMark) + ""));
             }
         }

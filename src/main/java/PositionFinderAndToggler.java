@@ -2,11 +2,11 @@ public class PositionFinderAndToggler {
     public static int findPositionOfQuestionMark(Equation equation) {
        return equation.givenValue.indexOf('?');
     }
-    public static int findMatches(Equation equation) {
-        int matches=0;
+    public static boolean checkIfMatches(Equation equation) {
+        boolean matches=true;
         for(int i=0;i<equation.givenValue.length();i++) {
-            if(equation.givenValue.charAt(i)== equation.calculatedValue.charAt(i) && equation.indexOfQuestionMark!=i) {
-                matches++;
+            if(equation.givenValue.charAt(i)!= equation.calculatedValue.charAt(i) && equation.indexOfQuestionMark!=i) {
+                matches=false;
             }
         }
         return matches;
