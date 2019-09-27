@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DigitFinderTester" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-09-27T04:35:01" hostname="RENTLAPT0067" time="0.059">
+  <properties/>
+  <testcase name="testSimple()" classname="DigitFinderTester" time="0.059"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
