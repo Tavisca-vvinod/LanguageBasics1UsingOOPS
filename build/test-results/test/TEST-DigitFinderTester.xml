@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="DigitFinderTester" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-09-27T04:35:01" hostname="RENTLAPT0067" time="0.059">
+<testsuite name="DigitFinderTester" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-09-27T07:40:45" hostname="RENTLAPT0067" time="0.049">
   <properties/>
-  <testcase name="testSimple()" classname="DigitFinderTester" time="0.059"/>
+  <testcase name="missingDigitInvalid()" classname="DigitFinderTester" time="0.033"/>
+  <testcase name="missingDigitInTermTwoFinder()" classname="DigitFinderTester" time="0.001"/>
+  <testcase name="missingDigitInTermThreeFinder()" classname="DigitFinderTester" time="0.001"/>
+  <testcase name="missingDigitInTermOneFinder()" classname="DigitFinderTester" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
