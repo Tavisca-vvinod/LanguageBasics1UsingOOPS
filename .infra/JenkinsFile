@@ -20,17 +20,19 @@ pipeline
         }
         stage('Build DockerImage'){
             steps {
-                sh script: '''
+                echo 'Building dockerImage'
+                /*sh script: '''
                 docker build -t "langaugebasics1" -f Dockerfile .
-                '''
+                '''*/
             }
         }
         stage('Publish DockerImage')
         {
             steps {
-                sh "docker login -u varsha3604 -p varshauae123"
+               echo 'Publishing dockerImage'
+               /* sh "docker login -u varsha3604 -p varshauae123"
                 sh "docker tag langaugebasics1:latest varsha3604/languagebasics1:latest"
-                sh "docker push varsha3604/langaugebasics1:latest"
+                sh "docker push varsha3604/langaugebasics1:latest"*/
                 }
         }
      }
