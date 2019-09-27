@@ -1,2 +1,3 @@
 rootProject.name = 'Tavisca.Bootcamp.LanguageBasics.Exercise1 '
+include 'testing'
 
