@@ -1,0 +1,42 @@
+pipeline
+{
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                sh 'chmod +x ./gradlew'
+                sh './gradlew build -x test'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh './gradlew test'
+            }
+        }
+        stage('Building SONAR') {
+            steps {
+                echo 'Using sonarQube to do static code analysis'
+            }
+        }
+        stage('Build DockerImage'){
+            steps {
+                sh script: '''
+                docker build -t "langaugebasics1" -f Dockerfile .
+                '''
+            }
+        }
+        stage('Publish DockerImage')
+        {
+            steps {
+                sh "docker login -u varsha3604 -p varshauae123"
+                sh "docker tag langaugebasics1:latest varsha3604/languagebasics1:latest"
+                sh "docker push varsha3604/langaugebasics1:latest"
+                }
+        }
+     }
+     post{
+         always{
+              deleteDir()
+          }
+     }
+}
